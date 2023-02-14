@@ -1,0 +1,58 @@
+[package]
+name = "nbt-to-json"
+author = ["simple-mq <simple-mq@qq.com>"]
+version = "1.0.0"
+edition = "2021"
+description = "Nbt-to-json可以将.nbt格式文件转换为json格式"
+license = "Apache-2.0"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/simple-mq/nbt-to-json"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+cfg-if = "1.0.0"
+json = "0.12.4"
+thiserror = "1.0.38"
+anyhow = "1.0.69"
+clap = { version = "4.1.4", features = ["derive"] }
+
+# The `console_error_panic_hook` crate provides better debugging of panics by
+# logging them with `console.error`. This is great for development, but requires
+# all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
+# code size when deploying.
+console_error_panic_hook = { version = "0.1.6", optional = true }
+
+# `wee_alloc` is a tiny allocator for wasm that is only ~1K in code size
+# compared to the default allocator's ~10K. It is slower than the default
+# allocator, however.
+#
+# Unfortunately, `wee_alloc` requires nightly Rust when targeting wasm for now.
+wee_alloc = { version = "0.4.5", optional = true }
+js-sys = "0.3.61"
+wasm-bindgen-futures = "0.4.34"
+
+[dependencies.web-sys]
+web-sys = "0.3.61"
+features = [
+    "File",
+    "Blob",
+]
+
+[dependencies.wasm-bindgen]
+wasm-bindgen = "0.2.63"
+
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[profile.release]
+opt-level = "s"
+
+[features]
+default = ["console_error_panic_hook", "wee_alloc"]
+
+[badges]
+maintenance = { status = "as-is" }

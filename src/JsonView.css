@@ -1,0 +1,72 @@
+#root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.op-div {
+	background-color: #1677ff;
+	width: 100px;
+	height: 50px;
+	padding: 2px 2px;
+	border-radius: 16px;
+	position: relative;
+	box-shadow: 5px 5px 3px #888888;
+}
+
+.text {
+	position: relative;
+	font-family: fantasy;
+	font-size: 18px;
+	font-weight: 550;
+	display: inline-block;
+	color: white;
+}
+
+#button-div {
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	bottom: 120px;
+	position: relative;
+}
+
+.op-button {
+	width: 100%;
+	height: 100%;
+	background: rgba(251, 115, 138, 0.08);
+	border-width: 0px;
+}
+
+#output {
+	width: 100%;
+	height: 50px;
+}
+
+.JsonView {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+#input {
+	position: relative;
+	z-index: 1;
+	opacity: 0;
+	bottom: 35px;
+	left: 11px;
+	width: 80px;
+}
