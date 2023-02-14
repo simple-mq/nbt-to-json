@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<div id='title-div'>
 			<GithubLink />
-			<img id='wasm-ferris' src='../assets/wasm-ferris.png' />
+			<img id='wasm-ferris' src='./assets/wasm-ferris.png' />
 			<Title />
 		</div>
 		<JsonView src={{ example: 'Hello, World!' }} _src='{"example": "Hello, World!"}' file_name='hello world' />
