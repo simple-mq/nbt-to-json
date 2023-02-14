@@ -10811,7 +10811,7 @@ client.createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxs(React.StrictMode, { children: [
     /* @__PURE__ */ jsxs("div", { id: "title-div", children: [
       /* @__PURE__ */ jsx(GithubLink, {}),
-      /* @__PURE__ */ jsx("img", { id: "wasm-ferris", src: "./assets/wasm-ferris.png" }),
+      /* @__PURE__ */ jsx("img", { id: "wasm-ferris", src: "./wasm-ferris.png" }),
       /* @__PURE__ */ jsx(Title, {})
     ] }),
     /* @__PURE__ */ jsx(JsonView, { src: { example: "Hello, World!" }, _src: '{"example": "Hello, World!"}', file_name: "hello world" })
